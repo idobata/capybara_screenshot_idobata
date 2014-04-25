@@ -1,5 +1,7 @@
 # Capybara Screenshot Idobata
 
+[![Build Status](https://travis-ci.org/idobata/capybara_screenshot_idobata.png)](https://travis-ci.org/idobata/capybara_screenshot_idobata)
+
 Save screenshot using [Capybara](https://github.com/jnicklas/capybara) and post to [Idobata](https://idobata.io).
 
 For all users who met the failing tests only CI.
