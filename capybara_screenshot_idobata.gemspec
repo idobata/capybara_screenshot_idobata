@@ -25,6 +25,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'cucumber', '~> 1.3.0'
   spec.add_development_dependency 'multipart-parser'
   spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'rspec',    '~> 2.99.0'
+  spec.add_development_dependency 'rspec',    '>= 3.0.0'
   spec.add_development_dependency 'webmock'
 end
