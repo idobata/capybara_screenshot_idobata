@@ -13,7 +13,7 @@ end
 Capybara.app = lambda {|env| [200, {}, ['hi']] }
 
 Before do
-  allow(page.driver).to receive(:save_screenshot).and_return {|filepath|
+  allow(page.driver).to receive(:save_screenshot) {|filepath|
     File.write(filepath, "\x89PNG")
   }
 end
