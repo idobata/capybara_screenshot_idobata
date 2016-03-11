@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'The request to Idobata', type: :feature do
   before do
-    allow(page.driver).to receive(:save_screenshot).and_return {|filepath|
+    allow(page.driver).to receive(:save_screenshot) {|filepath|
       File.write(filepath, "\x89PNG")
     }
   end
