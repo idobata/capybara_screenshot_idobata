@@ -8,7 +8,7 @@ module CapybaraScreenshotIdobata
 
       options = detect_default_option(Capybara.current_driver).merge(options)
 
-      save_screenshot filename, options
+      screenshot_path = save_screenshot(filename, options)
 
       absolute_filepath, line = caller[0].split(':')
 
@@ -16,7 +16,7 @@ module CapybaraScreenshotIdobata
 
       source = CapybaraScreenshotIdobata.message_formatter.call(filepath, line, self)
 
-      File.open(filename, 'rb') do |file|
+      File.open(screenshot_path, 'rb') do |file|
         RestClient.post(CapybaraScreenshotIdobata.hook_url,
           {
             source: source,
